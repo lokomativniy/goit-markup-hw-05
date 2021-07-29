@@ -41,7 +41,13 @@
    <main>
       <section class="section-hero">
             <h1 class="title-hero">ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br> ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-            <button class="btn" type="button">Заказать услугу</button>
+            <button data-modal-open class="btn" type="button">Заказать услугу</button>
+            <div class="backdrop is-hidden" data-modal>
+               <div class="modal">
+                  <p>Закрыть</p>
+               </div>
+            </div>
+            <button data-modal-close>            </button>
       </section>
       <section class="section"> 
          <div class="container">
@@ -90,9 +96,24 @@
          <div class="container">
             <h2 class="section-title">Чем мы занимаемся</h2>
             <ul class="img-list">
-               <li class=""> <img class="img" src="./images/box1.jpg" alt="box1" width="370"></li>
-               <li class=""> <img class="img" src="./images/box2.jpg" alt="box2" width="370"></li>
-               <li class=""> <img class="img" src="./images/box3.jpg" alt="box3" width="370"></li>
+               <li class=""> 
+                  <div class="img-overlay">
+                     <img class="img" src="./images/box1.jpg" alt="box1" width="370">
+                     <h3 class="img-title">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
+                   </div>
+               </li>
+               <li class=""> 
+                  <div class="img-overlay">
+                     <img class="img" src="./images/box2.jpg" alt="box2" width="370">
+                     <h3 class="img-title">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
+                  </div>
+                  </li>
+               <li class=""> 
+                  <div class="img-overlay">
+                     <img class="img" src="./images/box3.jpg" alt="box3" width="370">
+                     <h3 class="img-title">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
+                  </div>
+               </li>
             </ul>
          </div>
       </section>
@@ -348,5 +369,6 @@
          </div>
        </div>
    </footer>
+   <script src="./js/modal.js"></script>
 </body>
 </html>
