@@ -115,6 +115,7 @@ ul {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color 250ms var(--timing-function)
 }
 .link-current {
   position: relative;
@@ -140,12 +141,13 @@ ul {
 .link:hover,
 .link:focus,
 .contacts-link:hover .contacts-icon,.contacts-link:focus .contacts-icon
- {
+ {transition: transform 250ms var(--timing-function);
   fill:var(--accent-color);
   color: var(--accent-color);
 }
 .contacts-link:hover,.contacts-link:focus{
   color: var(--accent-color);
+  transition: transform 250ms var(--timing-function);
 }
 
 .contacts-list {
@@ -168,11 +170,13 @@ ul {
   line-height: 1.14;
   padding-top: 20px;
   padding-bottom: 20px;
+  transition: color 250ms var(--timing-function);
 }
 .contacts-icon{
   margin-right: 10px;
   fill: var(--text-color);
   padding: 0;
+  transition: fill 250ms var(--timing-function);
 }
 
 
@@ -365,11 +369,12 @@ ul {
 }
 .links-icon{
   fill: #AFB1B8;
+  transition: fill 250ms var(--timing-function)
 }
 .social-links:hover .links-icon, .social-links:focus .links-icon    
 {
   fill: #FFFFFF;
-
+  transition: transform 250ms var(--timing-function)
 }     
 .client-list{
   display: flex;
@@ -388,15 +393,20 @@ ul {
   background: #FFFFFF;
   border-radius: 4px;
   padding: 16px 31px;
+  transition: border-color 250ms var(--timing-function);
 }
 .client-link:hover .client-icon, .client-link:focus .client-icon{
   fill: var(--accent-color);
+  transition: transform 250ms var(--timing-function);
+  
 }
 .client-link:hover, .client-link:focus{
   border-color: var(--accent-color);
+  transition: transform 250ms var(--timing-function);
 }
 .client-icon{
   fill: #AFB1B8;
+  transition: fill 250ms var(--timing-function);
 }
 .client-icon:hover,
 .client-icon:focus{
@@ -428,6 +438,8 @@ ul {
   border: none;
   display: inline-block;
   padding: 6px 22px;
+  transition: color 250ms var(--timing-function),
+  background 250ms var(--timing-function);
 }
 .filter-button:hover , .filter-button:focus{
   color: var(--primary-white-color);
@@ -435,6 +447,7 @@ ul {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
               0px 1px 2px rgba(0, 0, 0, 0.08), 
               0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: transform 250ms var(--timing-function);
 }
 
 .project-list {
@@ -453,44 +466,38 @@ ul {
 
 
 }
-.project-link:hover .project-overlay{
-  display: block;
+.project-link:hover .project-thumb{
+  
+}
+
+.project-thumb{
+  position: relative;
+  overflow: hidden;
 }
 
 .project-overlay{
-  position: relative;
-
-}
-
-.project-text-is-hidden{
   position: absolute;
-  opacity: 0;
+  height: 100%;
   width: 100%;
-  bottom: 0;
+  top: 0;
   left: 0;
   font-size: 18px;
   line-height: 1.56;
-  color:#ffffff;
   padding: 63px 24px;  
-  
-  transition: transform 250ms;
-}
-
-.project-link:hover .project-text-is-hidden, .project-link:focus .project-text-is-hidden{ 
-  opacity: 1;
-  transform: translateY(-50px);
-} 
-
-.project-link:hover .project-overlay::before,
-.project-link:focus .project-overlay::before{
-  display: block;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
   background: rgba(33, 150, 243, 0.9);
-  transform: 
+  color:#ffffff;
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+  overflow: hidden;
 }
+.project-text-is-hidden{
+  display: block;
+
+}
+.project-link:hover .project-overlay, .project-link:focus .project-overlay{
+  transform: translateY(0);
+}
+      
 
 .project-link:hover, 
 .project-link:focus{
@@ -502,6 +509,7 @@ ul {
   text-decoration: none;
   color: var(--primary-text-color);
   display: block;
+  
 }
 
 .project-title {
@@ -516,11 +524,11 @@ ul {
   font-size: 16px;
   line-height: 1.88;
 }
-.border {
+.border-box {
   padding: 20px 24px;
-  border-left: 1px solid #EEEEEE; ;
-  border-right: 1px solid #EEEEEE; ;
-  border-bottom: 1px solid #EEEEEE; ;
+  border-left: 1px solid #EEEEEE; 
+  border-right: 1px solid #EEEEEE; 
+  border-bottom: 1px solid #EEEEEE; 
 }
 /* common footer */
 .footer {
